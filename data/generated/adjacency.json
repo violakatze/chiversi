@@ -1,0 +1,2997 @@
+{
+  "municipalities": [
+    {
+      "code": "12238",
+      "name": "いすみ市",
+      "centroid": [
+        140.343301,
+        35.277773
+      ],
+      "neighbors": [
+        "一宮町",
+        "勝浦市",
+        "大多喜町",
+        "御宿町",
+        "睦沢町"
+      ],
+      "neighborDetails": [
+        {
+          "name": "御宿町",
+          "borderLengthKm": 14.46,
+          "type": "land"
+        },
+        {
+          "name": "大多喜町",
+          "borderLengthKm": 13.88,
+          "type": "land"
+        },
+        {
+          "name": "睦沢町",
+          "borderLengthKm": 11.72,
+          "type": "land"
+        },
+        {
+          "name": "一宮町",
+          "borderLengthKm": 9.79,
+          "type": "land"
+        },
+        {
+          "name": "勝浦市",
+          "borderLengthKm": 7.83,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12421",
+      "name": "一宮町",
+      "centroid": [
+        140.37084,
+        35.361522
+      ],
+      "neighbors": [
+        "いすみ市",
+        "睦沢町",
+        "長生村"
+      ],
+      "neighborDetails": [
+        {
+          "name": "いすみ市",
+          "borderLengthKm": 9.79,
+          "type": "land"
+        },
+        {
+          "name": "睦沢町",
+          "borderLengthKm": 7.98,
+          "type": "land"
+        },
+        {
+          "name": "長生村",
+          "borderLengthKm": 7.53,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12403",
+      "name": "九十九里町",
+      "centroid": [
+        140.433817,
+        35.533322
+      ],
+      "neighbors": [
+        "大網白里市",
+        "山武市",
+        "東金市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "東金市",
+          "borderLengthKm": 23.0,
+          "type": "land"
+        },
+        {
+          "name": "山武市",
+          "borderLengthKm": 6.49,
+          "type": "land"
+        },
+        {
+          "name": "大網白里市",
+          "borderLengthKm": 3.52,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12212",
+      "name": "佐倉市",
+      "centroid": [
+        140.213254,
+        35.706196
+      ],
+      "neighbors": [
+        "八千代市",
+        "八街市",
+        "千葉市花見川区",
+        "千葉市若葉区",
+        "印西市",
+        "四街道市",
+        "酒々井町"
+      ],
+      "neighborDetails": [
+        {
+          "name": "八街市",
+          "borderLengthKm": 39.49,
+          "type": "land"
+        },
+        {
+          "name": "四街道市",
+          "borderLengthKm": 20.78,
+          "type": "land"
+        },
+        {
+          "name": "酒々井町",
+          "borderLengthKm": 15.35,
+          "type": "land"
+        },
+        {
+          "name": "印西市",
+          "borderLengthKm": 14.15,
+          "type": "land"
+        },
+        {
+          "name": "八千代市",
+          "borderLengthKm": 13.86,
+          "type": "land"
+        },
+        {
+          "name": "千葉市若葉区",
+          "borderLengthKm": 8.18,
+          "type": "land"
+        },
+        {
+          "name": "千葉市花見川区",
+          "borderLengthKm": 2.13,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12221",
+      "name": "八千代市",
+      "centroid": [
+        140.105025,
+        35.739209
+      ],
+      "neighbors": [
+        "佐倉市",
+        "千葉市花見川区",
+        "印西市",
+        "白井市",
+        "習志野市",
+        "船橋市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "船橋市",
+          "borderLengthKm": 16.14,
+          "type": "land"
+        },
+        {
+          "name": "佐倉市",
+          "borderLengthKm": 13.86,
+          "type": "land"
+        },
+        {
+          "name": "千葉市花見川区",
+          "borderLengthKm": 9.0,
+          "type": "land"
+        },
+        {
+          "name": "印西市",
+          "borderLengthKm": 7.69,
+          "type": "land"
+        },
+        {
+          "name": "習志野市",
+          "borderLengthKm": 3.97,
+          "type": "land"
+        },
+        {
+          "name": "白井市",
+          "borderLengthKm": 0.84,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12230",
+      "name": "八街市",
+      "centroid": [
+        140.296859,
+        35.642415
+      ],
+      "neighbors": [
+        "佐倉市",
+        "千葉市若葉区",
+        "富里市",
+        "山武市",
+        "東金市",
+        "酒々井町"
+      ],
+      "neighborDetails": [
+        {
+          "name": "佐倉市",
+          "borderLengthKm": 39.49,
+          "type": "land"
+        },
+        {
+          "name": "東金市",
+          "borderLengthKm": 26.14,
+          "type": "land"
+        },
+        {
+          "name": "山武市",
+          "borderLengthKm": 17.11,
+          "type": "land"
+        },
+        {
+          "name": "富里市",
+          "borderLengthKm": 13.46,
+          "type": "land"
+        },
+        {
+          "name": "千葉市若葉区",
+          "borderLengthKm": 11.58,
+          "type": "land"
+        },
+        {
+          "name": "酒々井町",
+          "borderLengthKm": 2.02,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12218",
+      "name": "勝浦市",
+      "centroid": [
+        140.267616,
+        35.175174
+      ],
+      "neighbors": [
+        "いすみ市",
+        "大多喜町",
+        "御宿町",
+        "鴨川市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "大多喜町",
+          "borderLengthKm": 22.14,
+          "type": "land"
+        },
+        {
+          "name": "御宿町",
+          "borderLengthKm": 12.56,
+          "type": "land"
+        },
+        {
+          "name": "鴨川市",
+          "borderLengthKm": 11.07,
+          "type": "land"
+        },
+        {
+          "name": "いすみ市",
+          "borderLengthKm": 7.83,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12235",
+      "name": "匝瑳市",
+      "centroid": [
+        140.553647,
+        35.699839
+      ],
+      "neighbors": [
+        "多古町",
+        "旭市",
+        "横芝光町",
+        "香取市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "旭市",
+          "borderLengthKm": 25.35,
+          "type": "land"
+        },
+        {
+          "name": "横芝光町",
+          "borderLengthKm": 21.76,
+          "type": "land"
+        },
+        {
+          "name": "多古町",
+          "borderLengthKm": 12.83,
+          "type": "land"
+        },
+        {
+          "name": "香取市",
+          "borderLengthKm": 2.23,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12101",
+      "name": "千葉市中央区",
+      "centroid": [
+        140.129405,
+        35.584378
+      ],
+      "neighbors": [
+        "千葉市稲毛区",
+        "千葉市緑区",
+        "千葉市美浜区",
+        "千葉市若葉区",
+        "市原市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "千葉市若葉区",
+          "borderLengthKm": 10.93,
+          "type": "land"
+        },
+        {
+          "name": "千葉市緑区",
+          "borderLengthKm": 7.8,
+          "type": "land"
+        },
+        {
+          "name": "市原市",
+          "borderLengthKm": 6.33,
+          "type": "land"
+        },
+        {
+          "name": "千葉市稲毛区",
+          "borderLengthKm": 4.17,
+          "type": "land"
+        },
+        {
+          "name": "千葉市美浜区",
+          "borderLengthKm": 2.3,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12103",
+      "name": "千葉市稲毛区",
+      "centroid": [
+        140.113116,
+        35.648603
+      ],
+      "neighbors": [
+        "千葉市中央区",
+        "千葉市美浜区",
+        "千葉市花見川区",
+        "千葉市若葉区",
+        "四街道市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "千葉市花見川区",
+          "borderLengthKm": 11.9,
+          "type": "land"
+        },
+        {
+          "name": "千葉市若葉区",
+          "borderLengthKm": 7.52,
+          "type": "land"
+        },
+        {
+          "name": "四街道市",
+          "borderLengthKm": 6.43,
+          "type": "land"
+        },
+        {
+          "name": "千葉市中央区",
+          "borderLengthKm": 4.17,
+          "type": "land"
+        },
+        {
+          "name": "千葉市美浜区",
+          "borderLengthKm": 3.51,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12105",
+      "name": "千葉市緑区",
+      "centroid": [
+        140.22947,
+        35.544579
+      ],
+      "neighbors": [
+        "千葉市中央区",
+        "千葉市若葉区",
+        "大網白里市",
+        "市原市",
+        "東金市",
+        "茂原市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "市原市",
+          "borderLengthKm": 25.88,
+          "type": "land"
+        },
+        {
+          "name": "千葉市若葉区",
+          "borderLengthKm": 20.43,
+          "type": "land"
+        },
+        {
+          "name": "大網白里市",
+          "borderLengthKm": 14.7,
+          "type": "land"
+        },
+        {
+          "name": "千葉市中央区",
+          "borderLengthKm": 7.8,
+          "type": "land"
+        },
+        {
+          "name": "茂原市",
+          "borderLengthKm": 5.21,
+          "type": "land"
+        },
+        {
+          "name": "東金市",
+          "borderLengthKm": 1.68,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12106",
+      "name": "千葉市美浜区",
+      "centroid": [
+        140.061619,
+        35.63354
+      ],
+      "neighbors": [
+        "千葉市中央区",
+        "千葉市稲毛区",
+        "千葉市花見川区",
+        "習志野市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "千葉市花見川区",
+          "borderLengthKm": 6.47,
+          "type": "land"
+        },
+        {
+          "name": "千葉市稲毛区",
+          "borderLengthKm": 3.51,
+          "type": "land"
+        },
+        {
+          "name": "習志野市",
+          "borderLengthKm": 2.55,
+          "type": "land"
+        },
+        {
+          "name": "千葉市中央区",
+          "borderLengthKm": 2.3,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12102",
+      "name": "千葉市花見川区",
+      "centroid": [
+        140.091408,
+        35.676357
+      ],
+      "neighbors": [
+        "佐倉市",
+        "八千代市",
+        "千葉市稲毛区",
+        "千葉市美浜区",
+        "四街道市",
+        "習志野市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "千葉市稲毛区",
+          "borderLengthKm": 11.9,
+          "type": "land"
+        },
+        {
+          "name": "八千代市",
+          "borderLengthKm": 9.0,
+          "type": "land"
+        },
+        {
+          "name": "習志野市",
+          "borderLengthKm": 8.48,
+          "type": "land"
+        },
+        {
+          "name": "四街道市",
+          "borderLengthKm": 8.01,
+          "type": "land"
+        },
+        {
+          "name": "千葉市美浜区",
+          "borderLengthKm": 6.47,
+          "type": "land"
+        },
+        {
+          "name": "佐倉市",
+          "borderLengthKm": 2.13,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12104",
+      "name": "千葉市若葉区",
+      "centroid": [
+        140.205087,
+        35.610403
+      ],
+      "neighbors": [
+        "佐倉市",
+        "八街市",
+        "千葉市中央区",
+        "千葉市稲毛区",
+        "千葉市緑区",
+        "四街道市",
+        "東金市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "千葉市緑区",
+          "borderLengthKm": 20.43,
+          "type": "land"
+        },
+        {
+          "name": "四街道市",
+          "borderLengthKm": 17.87,
+          "type": "land"
+        },
+        {
+          "name": "八街市",
+          "borderLengthKm": 11.58,
+          "type": "land"
+        },
+        {
+          "name": "千葉市中央区",
+          "borderLengthKm": 10.93,
+          "type": "land"
+        },
+        {
+          "name": "佐倉市",
+          "borderLengthKm": 8.18,
+          "type": "land"
+        },
+        {
+          "name": "千葉市稲毛区",
+          "borderLengthKm": 7.52,
+          "type": "land"
+        },
+        {
+          "name": "東金市",
+          "borderLengthKm": 0.37,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12234",
+      "name": "南房総市",
+      "centroid": [
+        139.928447,
+        35.036705
+      ],
+      "neighbors": [
+        "鋸南町",
+        "館山市",
+        "鴨川市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "館山市",
+          "borderLengthKm": 60.03,
+          "type": "land"
+        },
+        {
+          "name": "鴨川市",
+          "borderLengthKm": 23.86,
+          "type": "land"
+        },
+        {
+          "name": "鋸南町",
+          "borderLengthKm": 13.13,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12231",
+      "name": "印西市",
+      "centroid": [
+        140.180338,
+        35.797962
+      ],
+      "neighbors": [
+        "佐倉市",
+        "八千代市",
+        "成田市",
+        "我孫子市",
+        "柏市",
+        "栄町",
+        "白井市",
+        "酒々井町"
+      ],
+      "neighborDetails": [
+        {
+          "name": "栄町",
+          "borderLengthKm": 17.0,
+          "type": "land"
+        },
+        {
+          "name": "佐倉市",
+          "borderLengthKm": 14.15,
+          "type": "land"
+        },
+        {
+          "name": "白井市",
+          "borderLengthKm": 8.93,
+          "type": "land"
+        },
+        {
+          "name": "八千代市",
+          "borderLengthKm": 7.69,
+          "type": "land"
+        },
+        {
+          "name": "成田市",
+          "borderLengthKm": 5.87,
+          "type": "land"
+        },
+        {
+          "name": "我孫子市",
+          "borderLengthKm": 5.46,
+          "type": "land"
+        },
+        {
+          "name": "柏市",
+          "borderLengthKm": 4.55,
+          "type": "land"
+        },
+        {
+          "name": "酒々井町",
+          "borderLengthKm": 2.11,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12225",
+      "name": "君津市",
+      "centroid": [
+        140.024114,
+        35.263002
+      ],
+      "neighbors": [
+        "大多喜町",
+        "富津市",
+        "市原市",
+        "木更津市",
+        "鴨川市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "木更津市",
+          "borderLengthKm": 45.08,
+          "type": "land"
+        },
+        {
+          "name": "富津市",
+          "borderLengthKm": 42.3,
+          "type": "land"
+        },
+        {
+          "name": "鴨川市",
+          "borderLengthKm": 25.25,
+          "type": "land"
+        },
+        {
+          "name": "市原市",
+          "borderLengthKm": 17.01,
+          "type": "land"
+        },
+        {
+          "name": "大多喜町",
+          "borderLengthKm": 7.42,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12228",
+      "name": "四街道市",
+      "centroid": [
+        140.179114,
+        35.671679
+      ],
+      "neighbors": [
+        "佐倉市",
+        "千葉市稲毛区",
+        "千葉市花見川区",
+        "千葉市若葉区"
+      ],
+      "neighborDetails": [
+        {
+          "name": "佐倉市",
+          "borderLengthKm": 20.78,
+          "type": "land"
+        },
+        {
+          "name": "千葉市若葉区",
+          "borderLengthKm": 17.87,
+          "type": "land"
+        },
+        {
+          "name": "千葉市花見川区",
+          "borderLengthKm": 8.01,
+          "type": "land"
+        },
+        {
+          "name": "千葉市稲毛区",
+          "borderLengthKm": 6.43,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12347",
+      "name": "多古町",
+      "centroid": [
+        140.471111,
+        35.757076
+      ],
+      "neighbors": [
+        "匝瑳市",
+        "成田市",
+        "横芝光町",
+        "芝山町",
+        "香取市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "香取市",
+          "borderLengthKm": 19.23,
+          "type": "land"
+        },
+        {
+          "name": "芝山町",
+          "borderLengthKm": 14.75,
+          "type": "land"
+        },
+        {
+          "name": "匝瑳市",
+          "borderLengthKm": 12.83,
+          "type": "land"
+        },
+        {
+          "name": "成田市",
+          "borderLengthKm": 10.9,
+          "type": "land"
+        },
+        {
+          "name": "横芝光町",
+          "borderLengthKm": 7.35,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12441",
+      "name": "大多喜町",
+      "centroid": [
+        140.213852,
+        35.242886
+      ],
+      "neighbors": [
+        "いすみ市",
+        "勝浦市",
+        "君津市",
+        "市原市",
+        "睦沢町",
+        "長南町",
+        "鴨川市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "市原市",
+          "borderLengthKm": 24.27,
+          "type": "land"
+        },
+        {
+          "name": "勝浦市",
+          "borderLengthKm": 22.14,
+          "type": "land"
+        },
+        {
+          "name": "いすみ市",
+          "borderLengthKm": 13.88,
+          "type": "land"
+        },
+        {
+          "name": "君津市",
+          "borderLengthKm": 7.42,
+          "type": "land"
+        },
+        {
+          "name": "鴨川市",
+          "borderLengthKm": 5.3,
+          "type": "land"
+        },
+        {
+          "name": "長南町",
+          "borderLengthKm": 3.75,
+          "type": "land"
+        },
+        {
+          "name": "睦沢町",
+          "borderLengthKm": 3.69,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12239",
+      "name": "大網白里市",
+      "centroid": [
+        140.342828,
+        35.512833
+      ],
+      "neighbors": [
+        "九十九里町",
+        "千葉市緑区",
+        "東金市",
+        "白子町",
+        "茂原市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "東金市",
+          "borderLengthKm": 26.39,
+          "type": "land"
+        },
+        {
+          "name": "茂原市",
+          "borderLengthKm": 22.27,
+          "type": "land"
+        },
+        {
+          "name": "千葉市緑区",
+          "borderLengthKm": 14.7,
+          "type": "land"
+        },
+        {
+          "name": "白子町",
+          "borderLengthKm": 4.06,
+          "type": "land"
+        },
+        {
+          "name": "九十九里町",
+          "borderLengthKm": 3.52,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12226",
+      "name": "富津市",
+      "centroid": [
+        139.90057,
+        35.22595
+      ],
+      "neighbors": [
+        "君津市",
+        "鋸南町",
+        "鴨川市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "君津市",
+          "borderLengthKm": 42.3,
+          "type": "land"
+        },
+        {
+          "name": "鋸南町",
+          "borderLengthKm": 16.35,
+          "type": "land"
+        },
+        {
+          "name": "鴨川市",
+          "borderLengthKm": 9.0,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12233",
+      "name": "富里市",
+      "centroid": [
+        140.340812,
+        35.720259
+      ],
+      "neighbors": [
+        "八街市",
+        "山武市",
+        "成田市",
+        "芝山町",
+        "酒々井町"
+      ],
+      "neighborDetails": [
+        {
+          "name": "芝山町",
+          "borderLengthKm": 17.37,
+          "type": "land"
+        },
+        {
+          "name": "成田市",
+          "borderLengthKm": 16.93,
+          "type": "land"
+        },
+        {
+          "name": "八街市",
+          "borderLengthKm": 13.46,
+          "type": "land"
+        },
+        {
+          "name": "山武市",
+          "borderLengthKm": 9.13,
+          "type": "land"
+        },
+        {
+          "name": "酒々井町",
+          "borderLengthKm": 8.93,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12237",
+      "name": "山武市",
+      "centroid": [
+        140.420828,
+        35.623973
+      ],
+      "neighbors": [
+        "九十九里町",
+        "八街市",
+        "富里市",
+        "東金市",
+        "横芝光町",
+        "芝山町"
+      ],
+      "neighborDetails": [
+        {
+          "name": "東金市",
+          "borderLengthKm": 38.35,
+          "type": "land"
+        },
+        {
+          "name": "横芝光町",
+          "borderLengthKm": 26.29,
+          "type": "land"
+        },
+        {
+          "name": "八街市",
+          "borderLengthKm": 17.11,
+          "type": "land"
+        },
+        {
+          "name": "富里市",
+          "borderLengthKm": 9.13,
+          "type": "land"
+        },
+        {
+          "name": "九十九里町",
+          "borderLengthKm": 6.49,
+          "type": "land"
+        },
+        {
+          "name": "芝山町",
+          "borderLengthKm": 2.42,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12219",
+      "name": "市原市",
+      "centroid": [
+        140.137189,
+        35.424946
+      ],
+      "neighbors": [
+        "千葉市中央区",
+        "千葉市緑区",
+        "君津市",
+        "大多喜町",
+        "木更津市",
+        "茂原市",
+        "袖ケ浦市",
+        "長南町",
+        "長柄町"
+      ],
+      "neighborDetails": [
+        {
+          "name": "千葉市緑区",
+          "borderLengthKm": 25.88,
+          "type": "land"
+        },
+        {
+          "name": "長柄町",
+          "borderLengthKm": 25.65,
+          "type": "land"
+        },
+        {
+          "name": "大多喜町",
+          "borderLengthKm": 24.27,
+          "type": "land"
+        },
+        {
+          "name": "袖ケ浦市",
+          "borderLengthKm": 19.14,
+          "type": "land"
+        },
+        {
+          "name": "君津市",
+          "borderLengthKm": 17.01,
+          "type": "land"
+        },
+        {
+          "name": "木更津市",
+          "borderLengthKm": 15.77,
+          "type": "land"
+        },
+        {
+          "name": "長南町",
+          "borderLengthKm": 12.76,
+          "type": "land"
+        },
+        {
+          "name": "千葉市中央区",
+          "borderLengthKm": 6.33,
+          "type": "land"
+        },
+        {
+          "name": "茂原市",
+          "borderLengthKm": 2.62,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12203",
+      "name": "市川市",
+      "centroid": [
+        139.932835,
+        35.718826
+      ],
+      "neighbors": [
+        "松戸市",
+        "浦安市",
+        "船橋市",
+        "鎌ケ谷市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "松戸市",
+          "borderLengthKm": 19.06,
+          "type": "land"
+        },
+        {
+          "name": "船橋市",
+          "borderLengthKm": 17.93,
+          "type": "land"
+        },
+        {
+          "name": "浦安市",
+          "borderLengthKm": 4.55,
+          "type": "land"
+        },
+        {
+          "name": "鎌ケ谷市",
+          "borderLengthKm": 3.85,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12443",
+      "name": "御宿町",
+      "centroid": [
+        140.340653,
+        35.196434
+      ],
+      "neighbors": [
+        "いすみ市",
+        "勝浦市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "いすみ市",
+          "borderLengthKm": 14.46,
+          "type": "land"
+        },
+        {
+          "name": "勝浦市",
+          "borderLengthKm": 12.56,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12211",
+      "name": "成田市",
+      "centroid": [
+        140.357584,
+        35.815459
+      ],
+      "neighbors": [
+        "印西市",
+        "多古町",
+        "富里市",
+        "栄町",
+        "神崎町",
+        "芝山町",
+        "酒々井町",
+        "香取市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "芝山町",
+          "borderLengthKm": 21.57,
+          "type": "land"
+        },
+        {
+          "name": "神崎町",
+          "borderLengthKm": 18.24,
+          "type": "land"
+        },
+        {
+          "name": "香取市",
+          "borderLengthKm": 16.99,
+          "type": "land"
+        },
+        {
+          "name": "富里市",
+          "borderLengthKm": 16.93,
+          "type": "land"
+        },
+        {
+          "name": "栄町",
+          "borderLengthKm": 14.48,
+          "type": "land"
+        },
+        {
+          "name": "多古町",
+          "borderLengthKm": 10.9,
+          "type": "land"
+        },
+        {
+          "name": "酒々井町",
+          "borderLengthKm": 6.98,
+          "type": "land"
+        },
+        {
+          "name": "印西市",
+          "borderLengthKm": 5.87,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12222",
+      "name": "我孫子市",
+      "centroid": [
+        140.065097,
+        35.86947
+      ],
+      "neighbors": [
+        "印西市",
+        "柏市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "柏市",
+          "borderLengthKm": 28.24,
+          "type": "land"
+        },
+        {
+          "name": "印西市",
+          "borderLengthKm": 5.46,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12215",
+      "name": "旭市",
+      "centroid": [
+        140.65574,
+        35.734239
+      ],
+      "neighbors": [
+        "匝瑳市",
+        "東庄町",
+        "銚子市",
+        "香取市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "銚子市",
+          "borderLengthKm": 28.95,
+          "type": "land"
+        },
+        {
+          "name": "匝瑳市",
+          "borderLengthKm": 25.35,
+          "type": "land"
+        },
+        {
+          "name": "東庄町",
+          "borderLengthKm": 19.23,
+          "type": "land"
+        },
+        {
+          "name": "香取市",
+          "borderLengthKm": 11.65,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12206",
+      "name": "木更津市",
+      "centroid": [
+        139.987446,
+        35.369828
+      ],
+      "neighbors": [
+        "君津市",
+        "市原市",
+        "袖ケ浦市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "袖ケ浦市",
+          "borderLengthKm": 46.57,
+          "type": "land"
+        },
+        {
+          "name": "君津市",
+          "borderLengthKm": 45.08,
+          "type": "land"
+        },
+        {
+          "name": "市原市",
+          "borderLengthKm": 15.77,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12349",
+      "name": "東庄町",
+      "centroid": [
+        140.673177,
+        35.813646
+      ],
+      "neighbors": [
+        "旭市",
+        "銚子市",
+        "香取市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "旭市",
+          "borderLengthKm": 19.23,
+          "type": "land"
+        },
+        {
+          "name": "香取市",
+          "borderLengthKm": 11.26,
+          "type": "land"
+        },
+        {
+          "name": "銚子市",
+          "borderLengthKm": 8.6,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12213",
+      "name": "東金市",
+      "centroid": [
+        140.367064,
+        35.565176
+      ],
+      "neighbors": [
+        "九十九里町",
+        "八街市",
+        "千葉市緑区",
+        "千葉市若葉区",
+        "大網白里市",
+        "山武市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "山武市",
+          "borderLengthKm": 38.35,
+          "type": "land"
+        },
+        {
+          "name": "大網白里市",
+          "borderLengthKm": 26.39,
+          "type": "land"
+        },
+        {
+          "name": "八街市",
+          "borderLengthKm": 26.14,
+          "type": "land"
+        },
+        {
+          "name": "九十九里町",
+          "borderLengthKm": 23.0,
+          "type": "land"
+        },
+        {
+          "name": "千葉市緑区",
+          "borderLengthKm": 1.68,
+          "type": "land"
+        },
+        {
+          "name": "千葉市若葉区",
+          "borderLengthKm": 0.37,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12207",
+      "name": "松戸市",
+      "centroid": [
+        139.929078,
+        35.795744
+      ],
+      "neighbors": [
+        "市川市",
+        "柏市",
+        "流山市",
+        "鎌ケ谷市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "市川市",
+          "borderLengthKm": 19.06,
+          "type": "land"
+        },
+        {
+          "name": "柏市",
+          "borderLengthKm": 12.69,
+          "type": "land"
+        },
+        {
+          "name": "鎌ケ谷市",
+          "borderLengthKm": 10.61,
+          "type": "land"
+        },
+        {
+          "name": "流山市",
+          "borderLengthKm": 9.96,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12217",
+      "name": "柏市",
+      "centroid": [
+        139.993869,
+        35.86016
+      ],
+      "neighbors": [
+        "印西市",
+        "我孫子市",
+        "松戸市",
+        "流山市",
+        "白井市",
+        "野田市",
+        "鎌ケ谷市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "流山市",
+          "borderLengthKm": 35.4,
+          "type": "land"
+        },
+        {
+          "name": "我孫子市",
+          "borderLengthKm": 28.24,
+          "type": "land"
+        },
+        {
+          "name": "松戸市",
+          "borderLengthKm": 12.69,
+          "type": "land"
+        },
+        {
+          "name": "白井市",
+          "borderLengthKm": 12.62,
+          "type": "land"
+        },
+        {
+          "name": "鎌ケ谷市",
+          "borderLengthKm": 7.68,
+          "type": "land"
+        },
+        {
+          "name": "野田市",
+          "borderLengthKm": 5.69,
+          "type": "land"
+        },
+        {
+          "name": "印西市",
+          "borderLengthKm": 4.55,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12329",
+      "name": "栄町",
+      "centroid": [
+        140.242667,
+        35.844038
+      ],
+      "neighbors": [
+        "印西市",
+        "成田市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "印西市",
+          "borderLengthKm": 17.0,
+          "type": "land"
+        },
+        {
+          "name": "成田市",
+          "borderLengthKm": 14.48,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12410",
+      "name": "横芝光町",
+      "centroid": [
+        140.49473,
+        35.660832
+      ],
+      "neighbors": [
+        "匝瑳市",
+        "多古町",
+        "山武市",
+        "芝山町"
+      ],
+      "neighborDetails": [
+        {
+          "name": "山武市",
+          "borderLengthKm": 26.29,
+          "type": "land"
+        },
+        {
+          "name": "匝瑳市",
+          "borderLengthKm": 21.76,
+          "type": "land"
+        },
+        {
+          "name": "多古町",
+          "borderLengthKm": 7.35,
+          "type": "land"
+        },
+        {
+          "name": "芝山町",
+          "borderLengthKm": 5.78,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12220",
+      "name": "流山市",
+      "centroid": [
+        139.914097,
+        35.873371
+      ],
+      "neighbors": [
+        "松戸市",
+        "柏市",
+        "野田市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "柏市",
+          "borderLengthKm": 35.4,
+          "type": "land"
+        },
+        {
+          "name": "松戸市",
+          "borderLengthKm": 9.96,
+          "type": "land"
+        },
+        {
+          "name": "野田市",
+          "borderLengthKm": 6.47,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12227",
+      "name": "浦安市",
+      "centroid": [
+        139.901759,
+        35.642838
+      ],
+      "neighbors": [
+        "市川市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "市川市",
+          "borderLengthKm": 4.55,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12232",
+      "name": "白井市",
+      "centroid": [
+        140.060064,
+        35.801645
+      ],
+      "neighbors": [
+        "八千代市",
+        "印西市",
+        "柏市",
+        "船橋市",
+        "鎌ケ谷市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "柏市",
+          "borderLengthKm": 12.62,
+          "type": "land"
+        },
+        {
+          "name": "船橋市",
+          "borderLengthKm": 11.12,
+          "type": "land"
+        },
+        {
+          "name": "印西市",
+          "borderLengthKm": 8.93,
+          "type": "land"
+        },
+        {
+          "name": "鎌ケ谷市",
+          "borderLengthKm": 3.9,
+          "type": "land"
+        },
+        {
+          "name": "八千代市",
+          "borderLengthKm": 0.84,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12424",
+      "name": "白子町",
+      "centroid": [
+        140.379313,
+        35.450104
+      ],
+      "neighbors": [
+        "大網白里市",
+        "茂原市",
+        "長生村"
+      ],
+      "neighborDetails": [
+        {
+          "name": "茂原市",
+          "borderLengthKm": 12.45,
+          "type": "land"
+        },
+        {
+          "name": "長生村",
+          "borderLengthKm": 7.84,
+          "type": "land"
+        },
+        {
+          "name": "大網白里市",
+          "borderLengthKm": 4.06,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12422",
+      "name": "睦沢町",
+      "centroid": [
+        140.302247,
+        35.352805
+      ],
+      "neighbors": [
+        "いすみ市",
+        "一宮町",
+        "大多喜町",
+        "茂原市",
+        "長南町",
+        "長生村"
+      ],
+      "neighborDetails": [
+        {
+          "name": "長南町",
+          "borderLengthKm": 13.33,
+          "type": "land"
+        },
+        {
+          "name": "いすみ市",
+          "borderLengthKm": 11.72,
+          "type": "land"
+        },
+        {
+          "name": "一宮町",
+          "borderLengthKm": 7.98,
+          "type": "land"
+        },
+        {
+          "name": "長生村",
+          "borderLengthKm": 6.27,
+          "type": "land"
+        },
+        {
+          "name": "大多喜町",
+          "borderLengthKm": 3.69,
+          "type": "land"
+        },
+        {
+          "name": "茂原市",
+          "borderLengthKm": 3.56,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12342",
+      "name": "神崎町",
+      "centroid": [
+        140.408412,
+        35.886241
+      ],
+      "neighbors": [
+        "成田市",
+        "香取市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "成田市",
+          "borderLengthKm": 18.24,
+          "type": "land"
+        },
+        {
+          "name": "香取市",
+          "borderLengthKm": 7.98,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12216",
+      "name": "習志野市",
+      "centroid": [
+        140.034148,
+        35.680888
+      ],
+      "neighbors": [
+        "八千代市",
+        "千葉市美浜区",
+        "千葉市花見川区",
+        "船橋市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "船橋市",
+          "borderLengthKm": 16.24,
+          "type": "land"
+        },
+        {
+          "name": "千葉市花見川区",
+          "borderLengthKm": 8.48,
+          "type": "land"
+        },
+        {
+          "name": "八千代市",
+          "borderLengthKm": 3.97,
+          "type": "land"
+        },
+        {
+          "name": "千葉市美浜区",
+          "borderLengthKm": 2.55,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12204",
+      "name": "船橋市",
+      "centroid": [
+        140.018927,
+        35.726533
+      ],
+      "neighbors": [
+        "八千代市",
+        "市川市",
+        "白井市",
+        "習志野市",
+        "鎌ケ谷市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "鎌ケ谷市",
+          "borderLengthKm": 20.72,
+          "type": "land"
+        },
+        {
+          "name": "市川市",
+          "borderLengthKm": 17.93,
+          "type": "land"
+        },
+        {
+          "name": "習志野市",
+          "borderLengthKm": 16.24,
+          "type": "land"
+        },
+        {
+          "name": "八千代市",
+          "borderLengthKm": 16.14,
+          "type": "land"
+        },
+        {
+          "name": "白井市",
+          "borderLengthKm": 11.12,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12409",
+      "name": "芝山町",
+      "centroid": [
+        140.410226,
+        35.721509
+      ],
+      "neighbors": [
+        "多古町",
+        "富里市",
+        "山武市",
+        "成田市",
+        "横芝光町"
+      ],
+      "neighborDetails": [
+        {
+          "name": "成田市",
+          "borderLengthKm": 21.57,
+          "type": "land"
+        },
+        {
+          "name": "富里市",
+          "borderLengthKm": 17.37,
+          "type": "land"
+        },
+        {
+          "name": "多古町",
+          "borderLengthKm": 14.75,
+          "type": "land"
+        },
+        {
+          "name": "横芝光町",
+          "borderLengthKm": 5.78,
+          "type": "land"
+        },
+        {
+          "name": "山武市",
+          "borderLengthKm": 2.42,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12210",
+      "name": "茂原市",
+      "centroid": [
+        140.301626,
+        35.449815
+      ],
+      "neighbors": [
+        "千葉市緑区",
+        "大網白里市",
+        "市原市",
+        "白子町",
+        "睦沢町",
+        "長南町",
+        "長柄町",
+        "長生村"
+      ],
+      "neighborDetails": [
+        {
+          "name": "大網白里市",
+          "borderLengthKm": 22.27,
+          "type": "land"
+        },
+        {
+          "name": "長南町",
+          "borderLengthKm": 16.19,
+          "type": "land"
+        },
+        {
+          "name": "白子町",
+          "borderLengthKm": 12.45,
+          "type": "land"
+        },
+        {
+          "name": "長生村",
+          "borderLengthKm": 12.21,
+          "type": "land"
+        },
+        {
+          "name": "長柄町",
+          "borderLengthKm": 9.42,
+          "type": "land"
+        },
+        {
+          "name": "千葉市緑区",
+          "borderLengthKm": 5.21,
+          "type": "land"
+        },
+        {
+          "name": "睦沢町",
+          "borderLengthKm": 3.56,
+          "type": "land"
+        },
+        {
+          "name": "市原市",
+          "borderLengthKm": 2.62,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12229",
+      "name": "袖ケ浦市",
+      "centroid": [
+        140.017711,
+        35.416414
+      ],
+      "neighbors": [
+        "市原市",
+        "木更津市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "木更津市",
+          "borderLengthKm": 46.57,
+          "type": "land"
+        },
+        {
+          "name": "市原市",
+          "borderLengthKm": 19.14,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12322",
+      "name": "酒々井町",
+      "centroid": [
+        140.278025,
+        35.729279
+      ],
+      "neighbors": [
+        "佐倉市",
+        "八街市",
+        "印西市",
+        "富里市",
+        "成田市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "佐倉市",
+          "borderLengthKm": 15.35,
+          "type": "land"
+        },
+        {
+          "name": "富里市",
+          "borderLengthKm": 8.93,
+          "type": "land"
+        },
+        {
+          "name": "成田市",
+          "borderLengthKm": 6.98,
+          "type": "land"
+        },
+        {
+          "name": "印西市",
+          "borderLengthKm": 2.11,
+          "type": "land"
+        },
+        {
+          "name": "八街市",
+          "borderLengthKm": 2.02,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12208",
+      "name": "野田市",
+      "centroid": [
+        139.862151,
+        35.985165
+      ],
+      "neighbors": [
+        "柏市",
+        "流山市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "流山市",
+          "borderLengthKm": 6.47,
+          "type": "land"
+        },
+        {
+          "name": "柏市",
+          "borderLengthKm": 5.69,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12202",
+      "name": "銚子市",
+      "centroid": [
+        140.775757,
+        35.742934
+      ],
+      "neighbors": [
+        "旭市",
+        "東庄町"
+      ],
+      "neighborDetails": [
+        {
+          "name": "旭市",
+          "borderLengthKm": 28.95,
+          "type": "land"
+        },
+        {
+          "name": "東庄町",
+          "borderLengthKm": 8.6,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12463",
+      "name": "鋸南町",
+      "centroid": [
+        139.871909,
+        35.132422
+      ],
+      "neighbors": [
+        "南房総市",
+        "富津市",
+        "鴨川市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "富津市",
+          "borderLengthKm": 16.35,
+          "type": "land"
+        },
+        {
+          "name": "南房総市",
+          "borderLengthKm": 13.13,
+          "type": "land"
+        },
+        {
+          "name": "鴨川市",
+          "borderLengthKm": 1.51,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12224",
+      "name": "鎌ケ谷市",
+      "centroid": [
+        139.998819,
+        35.772893
+      ],
+      "neighbors": [
+        "市川市",
+        "松戸市",
+        "柏市",
+        "白井市",
+        "船橋市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "船橋市",
+          "borderLengthKm": 20.72,
+          "type": "land"
+        },
+        {
+          "name": "松戸市",
+          "borderLengthKm": 10.61,
+          "type": "land"
+        },
+        {
+          "name": "柏市",
+          "borderLengthKm": 7.68,
+          "type": "land"
+        },
+        {
+          "name": "白井市",
+          "borderLengthKm": 3.9,
+          "type": "land"
+        },
+        {
+          "name": "市川市",
+          "borderLengthKm": 3.85,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12427",
+      "name": "長南町",
+      "centroid": [
+        140.243007,
+        35.375198
+      ],
+      "neighbors": [
+        "大多喜町",
+        "市原市",
+        "睦沢町",
+        "茂原市",
+        "長柄町"
+      ],
+      "neighborDetails": [
+        {
+          "name": "茂原市",
+          "borderLengthKm": 16.19,
+          "type": "land"
+        },
+        {
+          "name": "睦沢町",
+          "borderLengthKm": 13.33,
+          "type": "land"
+        },
+        {
+          "name": "市原市",
+          "borderLengthKm": 12.76,
+          "type": "land"
+        },
+        {
+          "name": "長柄町",
+          "borderLengthKm": 11.22,
+          "type": "land"
+        },
+        {
+          "name": "大多喜町",
+          "borderLengthKm": 3.75,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12426",
+      "name": "長柄町",
+      "centroid": [
+        140.213385,
+        35.445898
+      ],
+      "neighbors": [
+        "市原市",
+        "茂原市",
+        "長南町"
+      ],
+      "neighborDetails": [
+        {
+          "name": "市原市",
+          "borderLengthKm": 25.65,
+          "type": "land"
+        },
+        {
+          "name": "長南町",
+          "borderLengthKm": 11.22,
+          "type": "land"
+        },
+        {
+          "name": "茂原市",
+          "borderLengthKm": 9.42,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12423",
+      "name": "長生村",
+      "centroid": [
+        140.357743,
+        35.407082
+      ],
+      "neighbors": [
+        "一宮町",
+        "白子町",
+        "睦沢町",
+        "茂原市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "茂原市",
+          "borderLengthKm": 12.21,
+          "type": "land"
+        },
+        {
+          "name": "白子町",
+          "borderLengthKm": 7.84,
+          "type": "land"
+        },
+        {
+          "name": "一宮町",
+          "borderLengthKm": 7.53,
+          "type": "land"
+        },
+        {
+          "name": "睦沢町",
+          "borderLengthKm": 6.27,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12205",
+      "name": "館山市",
+      "centroid": [
+        139.861796,
+        34.971623
+      ],
+      "neighbors": [
+        "南房総市"
+      ],
+      "neighborDetails": [
+        {
+          "name": "南房総市",
+          "borderLengthKm": 60.03,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12236",
+      "name": "香取市",
+      "centroid": [
+        140.539943,
+        35.853476
+      ],
+      "neighbors": [
+        "匝瑳市",
+        "多古町",
+        "成田市",
+        "旭市",
+        "東庄町",
+        "神崎町"
+      ],
+      "neighborDetails": [
+        {
+          "name": "多古町",
+          "borderLengthKm": 19.23,
+          "type": "land"
+        },
+        {
+          "name": "成田市",
+          "borderLengthKm": 16.99,
+          "type": "land"
+        },
+        {
+          "name": "旭市",
+          "borderLengthKm": 11.65,
+          "type": "land"
+        },
+        {
+          "name": "東庄町",
+          "borderLengthKm": 11.26,
+          "type": "land"
+        },
+        {
+          "name": "神崎町",
+          "borderLengthKm": 7.98,
+          "type": "land"
+        },
+        {
+          "name": "匝瑳市",
+          "borderLengthKm": 2.23,
+          "type": "land"
+        }
+      ]
+    },
+    {
+      "code": "12223",
+      "name": "鴨川市",
+      "centroid": [
+        140.077729,
+        35.129877
+      ],
+      "neighbors": [
+        "勝浦市",
+        "南房総市",
+        "君津市",
+        "大多喜町",
+        "富津市",
+        "鋸南町"
+      ],
+      "neighborDetails": [
+        {
+          "name": "君津市",
+          "borderLengthKm": 25.25,
+          "type": "land"
+        },
+        {
+          "name": "南房総市",
+          "borderLengthKm": 23.86,
+          "type": "land"
+        },
+        {
+          "name": "勝浦市",
+          "borderLengthKm": 11.07,
+          "type": "land"
+        },
+        {
+          "name": "富津市",
+          "borderLengthKm": 9.0,
+          "type": "land"
+        },
+        {
+          "name": "大多喜町",
+          "borderLengthKm": 5.3,
+          "type": "land"
+        },
+        {
+          "name": "鋸南町",
+          "borderLengthKm": 1.51,
+          "type": "land"
+        }
+      ]
+    }
+  ],
+  "cycles4": [
+    [
+      "いすみ市",
+      "一宮町",
+      "大多喜町",
+      "睦沢町"
+    ],
+    [
+      "いすみ市",
+      "一宮町",
+      "睦沢町",
+      "長生村"
+    ],
+    [
+      "いすみ市",
+      "勝浦市",
+      "大多喜町",
+      "御宿町"
+    ],
+    [
+      "いすみ市",
+      "勝浦市",
+      "大多喜町",
+      "睦沢町"
+    ],
+    [
+      "いすみ市",
+      "勝浦市",
+      "大多喜町",
+      "鴨川市"
+    ],
+    [
+      "いすみ市",
+      "大多喜町",
+      "睦沢町",
+      "長南町"
+    ],
+    [
+      "一宮町",
+      "睦沢町",
+      "茂原市",
+      "長生村"
+    ],
+    [
+      "九十九里町",
+      "八街市",
+      "山武市",
+      "東金市"
+    ],
+    [
+      "九十九里町",
+      "千葉市緑区",
+      "大網白里市",
+      "東金市"
+    ],
+    [
+      "九十九里町",
+      "大網白里市",
+      "山武市",
+      "東金市"
+    ],
+    [
+      "佐倉市",
+      "八千代市",
+      "千葉市花見川区",
+      "印西市"
+    ],
+    [
+      "佐倉市",
+      "八千代市",
+      "千葉市花見川区",
+      "四街道市"
+    ],
+    [
+      "佐倉市",
+      "八千代市",
+      "千葉市花見川区",
+      "習志野市"
+    ],
+    [
+      "佐倉市",
+      "八千代市",
+      "印西市",
+      "白井市"
+    ],
+    [
+      "佐倉市",
+      "八千代市",
+      "印西市",
+      "酒々井町"
+    ],
+    [
+      "佐倉市",
+      "八街市",
+      "千葉市若葉区",
+      "四街道市"
+    ],
+    [
+      "佐倉市",
+      "八街市",
+      "千葉市若葉区",
+      "東金市"
+    ],
+    [
+      "佐倉市",
+      "八街市",
+      "千葉市若葉区",
+      "酒々井町"
+    ],
+    [
+      "佐倉市",
+      "八街市",
+      "印西市",
+      "酒々井町"
+    ],
+    [
+      "佐倉市",
+      "八街市",
+      "富里市",
+      "酒々井町"
+    ],
+    [
+      "佐倉市",
+      "千葉市稲毛区",
+      "千葉市花見川区",
+      "千葉市若葉区"
+    ],
+    [
+      "佐倉市",
+      "千葉市稲毛区",
+      "千葉市花見川区",
+      "四街道市"
+    ],
+    [
+      "佐倉市",
+      "千葉市稲毛区",
+      "千葉市若葉区",
+      "四街道市"
+    ],
+    [
+      "佐倉市",
+      "千葉市花見川区",
+      "千葉市若葉区",
+      "四街道市"
+    ],
+    [
+      "佐倉市",
+      "印西市",
+      "成田市",
+      "酒々井町"
+    ],
+    [
+      "八千代市",
+      "千葉市美浜区",
+      "千葉市花見川区",
+      "習志野市"
+    ],
+    [
+      "八千代市",
+      "千葉市花見川区",
+      "習志野市",
+      "船橋市"
+    ],
+    [
+      "八千代市",
+      "印西市",
+      "柏市",
+      "白井市"
+    ],
+    [
+      "八千代市",
+      "印西市",
+      "白井市",
+      "船橋市"
+    ],
+    [
+      "八千代市",
+      "白井市",
+      "習志野市",
+      "船橋市"
+    ],
+    [
+      "八千代市",
+      "白井市",
+      "船橋市",
+      "鎌ケ谷市"
+    ],
+    [
+      "八街市",
+      "千葉市緑区",
+      "千葉市若葉区",
+      "東金市"
+    ],
+    [
+      "八街市",
+      "千葉市若葉区",
+      "山武市",
+      "東金市"
+    ],
+    [
+      "八街市",
+      "富里市",
+      "山武市",
+      "東金市"
+    ],
+    [
+      "八街市",
+      "富里市",
+      "山武市",
+      "芝山町"
+    ],
+    [
+      "八街市",
+      "富里市",
+      "山武市",
+      "酒々井町"
+    ],
+    [
+      "八街市",
+      "富里市",
+      "成田市",
+      "酒々井町"
+    ],
+    [
+      "勝浦市",
+      "君津市",
+      "大多喜町",
+      "鴨川市"
+    ],
+    [
+      "匝瑳市",
+      "多古町",
+      "成田市",
+      "香取市"
+    ],
+    [
+      "匝瑳市",
+      "多古町",
+      "旭市",
+      "香取市"
+    ],
+    [
+      "匝瑳市",
+      "多古町",
+      "横芝光町",
+      "芝山町"
+    ],
+    [
+      "匝瑳市",
+      "多古町",
+      "横芝光町",
+      "香取市"
+    ],
+    [
+      "匝瑳市",
+      "旭市",
+      "東庄町",
+      "香取市"
+    ],
+    [
+      "千葉市中央区",
+      "千葉市稲毛区",
+      "千葉市緑区",
+      "千葉市若葉区"
+    ],
+    [
+      "千葉市中央区",
+      "千葉市稲毛区",
+      "千葉市美浜区",
+      "千葉市花見川区"
+    ],
+    [
+      "千葉市中央区",
+      "千葉市稲毛区",
+      "千葉市美浜区",
+      "千葉市若葉区"
+    ],
+    [
+      "千葉市中央区",
+      "千葉市稲毛区",
+      "千葉市若葉区",
+      "四街道市"
+    ],
+    [
+      "千葉市中央区",
+      "千葉市緑区",
+      "千葉市若葉区",
+      "市原市"
+    ],
+    [
+      "千葉市中央区",
+      "千葉市緑区",
+      "千葉市若葉区",
+      "東金市"
+    ],
+    [
+      "千葉市中央区",
+      "千葉市緑区",
+      "市原市",
+      "茂原市"
+    ],
+    [
+      "千葉市稲毛区",
+      "千葉市美浜区",
+      "千葉市花見川区",
+      "四街道市"
+    ],
+    [
+      "千葉市稲毛区",
+      "千葉市美浜区",
+      "千葉市花見川区",
+      "習志野市"
+    ],
+    [
+      "千葉市稲毛区",
+      "千葉市花見川区",
+      "千葉市若葉区",
+      "四街道市"
+    ],
+    [
+      "千葉市緑区",
+      "千葉市若葉区",
+      "大網白里市",
+      "東金市"
+    ],
+    [
+      "千葉市緑区",
+      "大網白里市",
+      "市原市",
+      "茂原市"
+    ],
+    [
+      "千葉市緑区",
+      "大網白里市",
+      "東金市",
+      "茂原市"
+    ],
+    [
+      "千葉市緑区",
+      "大網白里市",
+      "白子町",
+      "茂原市"
+    ],
+    [
+      "千葉市緑区",
+      "市原市",
+      "茂原市",
+      "長南町"
+    ],
+    [
+      "千葉市緑区",
+      "市原市",
+      "茂原市",
+      "長柄町"
+    ],
+    [
+      "南房総市",
+      "富津市",
+      "鋸南町",
+      "鴨川市"
+    ],
+    [
+      "印西市",
+      "富里市",
+      "成田市",
+      "酒々井町"
+    ],
+    [
+      "印西市",
+      "成田市",
+      "栄町",
+      "酒々井町"
+    ],
+    [
+      "印西市",
+      "我孫子市",
+      "柏市",
+      "白井市"
+    ],
+    [
+      "印西市",
+      "柏市",
+      "白井市",
+      "鎌ケ谷市"
+    ],
+    [
+      "君津市",
+      "大多喜町",
+      "富津市",
+      "鴨川市"
+    ],
+    [
+      "君津市",
+      "大多喜町",
+      "市原市",
+      "木更津市"
+    ],
+    [
+      "君津市",
+      "大多喜町",
+      "市原市",
+      "長南町"
+    ],
+    [
+      "君津市",
+      "大多喜町",
+      "市原市",
+      "鴨川市"
+    ],
+    [
+      "君津市",
+      "富津市",
+      "鋸南町",
+      "鴨川市"
+    ],
+    [
+      "君津市",
+      "市原市",
+      "木更津市",
+      "袖ケ浦市"
+    ],
+    [
+      "多古町",
+      "富里市",
+      "成田市",
+      "芝山町"
+    ],
+    [
+      "多古町",
+      "山武市",
+      "横芝光町",
+      "芝山町"
+    ],
+    [
+      "多古町",
+      "成田市",
+      "横芝光町",
+      "芝山町"
+    ],
+    [
+      "多古町",
+      "成田市",
+      "神崎町",
+      "香取市"
+    ],
+    [
+      "多古町",
+      "成田市",
+      "芝山町",
+      "香取市"
+    ],
+    [
+      "大多喜町",
+      "市原市",
+      "睦沢町",
+      "茂原市"
+    ],
+    [
+      "大多喜町",
+      "市原市",
+      "睦沢町",
+      "長南町"
+    ],
+    [
+      "大多喜町",
+      "市原市",
+      "茂原市",
+      "長南町"
+    ],
+    [
+      "大多喜町",
+      "市原市",
+      "長南町",
+      "長柄町"
+    ],
+    [
+      "大多喜町",
+      "睦沢町",
+      "茂原市",
+      "長南町"
+    ],
+    [
+      "大網白里市",
+      "白子町",
+      "茂原市",
+      "長生村"
+    ],
+    [
+      "富里市",
+      "山武市",
+      "成田市",
+      "芝山町"
+    ],
+    [
+      "富里市",
+      "山武市",
+      "横芝光町",
+      "芝山町"
+    ],
+    [
+      "富里市",
+      "成田市",
+      "芝山町",
+      "酒々井町"
+    ],
+    [
+      "市原市",
+      "睦沢町",
+      "茂原市",
+      "長南町"
+    ],
+    [
+      "市原市",
+      "茂原市",
+      "長南町",
+      "長柄町"
+    ],
+    [
+      "市川市",
+      "松戸市",
+      "柏市",
+      "鎌ケ谷市"
+    ],
+    [
+      "市川市",
+      "松戸市",
+      "船橋市",
+      "鎌ケ谷市"
+    ],
+    [
+      "市川市",
+      "白井市",
+      "船橋市",
+      "鎌ケ谷市"
+    ],
+    [
+      "旭市",
+      "東庄町",
+      "銚子市",
+      "香取市"
+    ],
+    [
+      "松戸市",
+      "柏市",
+      "流山市",
+      "野田市"
+    ],
+    [
+      "松戸市",
+      "柏市",
+      "流山市",
+      "鎌ケ谷市"
+    ],
+    [
+      "松戸市",
+      "柏市",
+      "白井市",
+      "鎌ケ谷市"
+    ],
+    [
+      "柏市",
+      "白井市",
+      "船橋市",
+      "鎌ケ谷市"
+    ],
+    [
+      "白子町",
+      "睦沢町",
+      "茂原市",
+      "長生村"
+    ],
+    [
+      "睦沢町",
+      "茂原市",
+      "長南町",
+      "長柄町"
+    ],
+    [
+      "睦沢町",
+      "茂原市",
+      "長南町",
+      "長生村"
+    ]
+  ],
+  "cycles4Central": [
+    [
+      "佐倉市",
+      "八千代市",
+      "千葉市花見川区",
+      "四街道市"
+    ],
+    [
+      "佐倉市",
+      "八千代市",
+      "千葉市花見川区",
+      "習志野市"
+    ],
+    [
+      "佐倉市",
+      "八街市",
+      "千葉市若葉区",
+      "四街道市"
+    ],
+    [
+      "佐倉市",
+      "千葉市稲毛区",
+      "千葉市花見川区",
+      "千葉市若葉区"
+    ],
+    [
+      "佐倉市",
+      "千葉市稲毛区",
+      "千葉市花見川区",
+      "四街道市"
+    ],
+    [
+      "佐倉市",
+      "千葉市稲毛区",
+      "千葉市若葉区",
+      "四街道市"
+    ],
+    [
+      "佐倉市",
+      "千葉市花見川区",
+      "千葉市若葉区",
+      "四街道市"
+    ],
+    [
+      "八千代市",
+      "千葉市美浜区",
+      "千葉市花見川区",
+      "習志野市"
+    ],
+    [
+      "千葉市中央区",
+      "千葉市稲毛区",
+      "千葉市緑区",
+      "千葉市若葉区"
+    ],
+    [
+      "千葉市中央区",
+      "千葉市稲毛区",
+      "千葉市美浜区",
+      "千葉市花見川区"
+    ],
+    [
+      "千葉市中央区",
+      "千葉市稲毛区",
+      "千葉市美浜区",
+      "千葉市若葉区"
+    ],
+    [
+      "千葉市中央区",
+      "千葉市稲毛区",
+      "千葉市若葉区",
+      "四街道市"
+    ],
+    [
+      "千葉市中央区",
+      "千葉市緑区",
+      "千葉市若葉区",
+      "市原市"
+    ],
+    [
+      "千葉市稲毛区",
+      "千葉市美浜区",
+      "千葉市花見川区",
+      "四街道市"
+    ],
+    [
+      "千葉市稲毛区",
+      "千葉市美浜区",
+      "千葉市花見川区",
+      "習志野市"
+    ],
+    [
+      "千葉市稲毛区",
+      "千葉市花見川区",
+      "千葉市若葉区",
+      "四街道市"
+    ]
+  ],
+  "metadata": {
+    "prefecture": "千葉県",
+    "municipalityCount": 59,
+    "adjacencyCount": 133,
+    "cycle4Count": 97,
+    "cycle4CentralCount": 16
+  }
+}
