@@ -12,7 +12,7 @@ export const DIRECTIONS: Direction[] = [
   { name: 'SE', center: -45 },
 ];
 
-const HALF_SECTOR = 22.5;
+const HALF_SECTOR = 30;
 
 /** 2点間の角度を返す（度数法、東=0°、反時計回り） */
 function angleBetween(a: [number, number], b: [number, number]): number {

@@ -49,9 +49,6 @@ function tryPlaceCycle(
  * フォールバック: 隣接する2市区町村に黒・白を1つずつ配置する。
  */
 export function buildInitialState(state: GameState): GameState {
-  const centralResult = tryPlaceCycle(adjacencyData.cycles4Central, state);
-  if (centralResult) return centralResult;
-
   const anyResult = tryPlaceCycle(adjacencyData.cycles4, state);
   if (anyResult) return anyResult;
 

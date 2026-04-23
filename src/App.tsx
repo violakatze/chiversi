@@ -129,13 +129,18 @@ export const App = () => {
           flexWrap: 'wrap',
         }}
       >
-        <GameInfo gameState={gameState} passMessage={passMessage} />
-        <Box sx={{ ml: 'auto' }}>
-          <GameControls onRestart={handleRestart} onShowRules={() => setRulesOpen(true)} />
-        </Box>
+        {gameState.isGameOver ? (
+          <ResultModal gameState={gameState} onRestart={handleRestart} onShowRules={() => setRulesOpen(true)} />
+        ) : (
+          <>
+            <GameInfo gameState={gameState} passMessage={passMessage} />
+            <Box sx={{ ml: 'auto' }}>
+              <GameControls onRestart={handleRestart} onShowRules={() => setRulesOpen(true)} />
+            </Box>
+          </>
+        )}
       </Box>
 
-      <ResultModal gameState={gameState} onRestart={handleRestart} />
       <RulesModal open={rulesOpen} onClose={() => setRulesOpen(false)} />
     </Box>
   );
