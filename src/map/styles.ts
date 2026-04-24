@@ -41,16 +41,16 @@ export function getCellStyle(
   isFlipPreview: boolean,
   showLabel: boolean
 ): Style {
-  if (isLast) {
-    const c = stone === 'black' ? COLOR.lastBlack : COLOR.lastWhite;
-    return makeStyle(c.fill, c.stroke, c.width, name, showLabel);
-  }
   if (isHovered) {
     const c = isLegal ? COLOR.hoverLegal : COLOR.hoverEmpty;
     return makeStyle(c.fill, c.stroke, c.width, name, showLabel);
   }
   if (isFlipPreview) {
     return makeStyle(COLOR.flipPreview.fill, COLOR.flipPreview.stroke, COLOR.flipPreview.width, name, showLabel);
+  }
+  if (isLast) {
+    const c = stone === 'black' ? COLOR.lastBlack : COLOR.lastWhite;
+    return makeStyle(c.fill, c.stroke, c.width, name, showLabel);
   }
   if (stone === 'black') return makeStyle(COLOR.black.fill, COLOR.black.stroke, COLOR.black.width, name, showLabel);
   if (stone === 'white') return makeStyle(COLOR.white.fill, COLOR.white.stroke, COLOR.white.width, name, showLabel);
