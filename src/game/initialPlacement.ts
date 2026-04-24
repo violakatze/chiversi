@@ -41,8 +41,11 @@ function tryPlaceCycle(
       whiteCount: white,
     };
 
-    // 黒の初手でゲームが即終了する配置を除外
-    if ([...blackLegal].some(move => applyMove(candidate, move).isGameOver)) continue;
+    // 黒の初手後に白が指せない・またはゲームが即終了する配置を除外
+    if ([...blackLegal].some(move => {
+      const next = applyMove(candidate, move);
+      return next.isGameOver || next.legalMoves.size === 0;
+    })) continue;
 
     return candidate;
   }
