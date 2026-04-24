@@ -1,6 +1,6 @@
 import type { GameState, StoneColor } from '../types';
 import { adjacencyData } from '../graph/adjacency';
-import { calcLegalMoves } from './engine';
+import { calcLegalMoves, applyMove } from './engine';
 
 /** 4環リストからランダムに1つ選んで初期配置を試みる */
 function tryPlaceCycle(
@@ -32,7 +32,7 @@ function tryPlaceCycle(
       else if (c.stone === 'white') white++;
     }
 
-    return {
+    const candidate: GameState = {
       ...state,
       cells,
       currentTurn: 'black',
@@ -40,6 +40,11 @@ function tryPlaceCycle(
       blackCount: black,
       whiteCount: white,
     };
+
+    // 黒の初手でゲームが即終了する配置を除外
+    if ([...blackLegal].some(move => applyMove(candidate, move).isGameOver)) continue;
+
+    return candidate;
   }
   return null;
 }
