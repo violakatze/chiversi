@@ -1,10 +1,10 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Box, AppBar, Toolbar, Typography } from '@mui/material';
 
-import type { GameState } from './types';
+import type { Difficulty, GameState } from './types';
 import { createInitialGameState, applyMove, applyPass } from './game/engine';
 import { buildInitialState } from './game/initialPlacement';
-import { chooseMoveRandom } from './game/ai';
+import { chooseMove } from './game/ai';
 import { MapView } from './map/MapView';
 import { GameInfo } from './components/GameInfo';
 import { GameControls } from './components/GameControls';
@@ -22,10 +22,14 @@ function initGame(): GameState {
 
 export const App = () => {
   const [gameState, setGameState] = useState<GameState>(initGame);
+  const [difficulty, setDifficulty] = useState<Difficulty>('normal');
   const [rulesOpen, setRulesOpen] = useState(false);
   const [passMessage, setPassMessage] = useState<string | null>(null);
   const cpuTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const passMessageTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const difficultyRef = useRef<Difficulty>(difficulty);
+
+  useEffect(() => { difficultyRef.current = difficulty; }, [difficulty]);
 
   const showPassMessage = useCallback((msg: string) => {
     setPassMessage(msg);
@@ -68,7 +72,7 @@ export const App = () => {
           return next;
         }
 
-        const move = chooseMoveRandom(prev);
+        const move = chooseMove(prev, difficultyRef.current);
         if (!move) return prev;
         return applyMove(prev, move);
       });
@@ -138,7 +142,12 @@ export const App = () => {
           <>
             <GameInfo gameState={gameState} passMessage={passMessage} />
             <Box sx={{ ml: { sm: 'auto' } }}>
-              <GameControls onRestart={handleRestart} onShowRules={() => setRulesOpen(true)} />
+              <GameControls
+                onRestart={handleRestart}
+                onShowRules={() => setRulesOpen(true)}
+                difficulty={difficulty}
+                onDifficultyChange={setDifficulty}
+              />
             </Box>
           </>
         )}

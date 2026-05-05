@@ -4,6 +4,9 @@ export type StoneColor = 'black' | 'white';
 /** プレイヤー種別 */
 export type PlayerType = 'human' | 'cpu';
 
+/** CPU難易度 */
+export type Difficulty = 'easy' | 'normal' | 'hard';
+
 /** 市区町村の隣接詳細 */
 export type NeighborDetail = {
   name: string;
