@@ -22,12 +22,14 @@ export const ResultModal = ({ gameState, onRestart, onShowRules }: Props) => {
     'default';
 
   return (
-    <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, width: '100%', flexWrap: 'wrap' }}>
-      <Chip label={label} color={chipColor} sx={{ fontWeight: 'bold', fontSize: '0.9rem' }} />
-      <Typography variant="body2">
-        最終スコア — 黒（あなた）: <strong>{blackCount}</strong> / 白（CPU）: <strong>{whiteCount}</strong>
-      </Typography>
-      <Box sx={{ ml: 'auto', display: 'flex', gap: 1 }}>
+    <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, alignItems: { xs: 'flex-start', sm: 'center' }, gap: 1, width: '100%' }}>
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, flexWrap: 'wrap' }}>
+        <Chip label={label} color={chipColor} sx={{ fontWeight: 'bold', fontSize: '0.9rem' }} />
+        <Typography variant="body2">
+          最終スコア — 黒（あなた）: <strong>{blackCount}</strong> / 白（CPU）: <strong>{whiteCount}</strong>
+        </Typography>
+      </Box>
+      <Box sx={{ display: 'flex', gap: 1, ml: { sm: 'auto' } }}>
         <Button variant="outlined" size="small" onClick={onShowRules}>
           ルール説明
         </Button>

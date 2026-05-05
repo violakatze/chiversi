@@ -9,7 +9,7 @@ import type { FeatureLike } from 'ol/Feature';
 
 import type { GameState } from '../types';
 import { getFlippable } from '../game/engine';
-import { getCellStyle } from './styles';
+import { getCellStyle, HIDDEN_STYLE } from './styles';
 
 type Props = {
   gameState: GameState;
@@ -36,6 +36,8 @@ export const MapView = ({ gameState, onCellClick, disabled }: Props) => {
   const onCellClickRef = useRef(onCellClick);
   // GeoJSON読み込み時に同名フィーチャーのうち最大面積以外（飛び地）を保持
   const enclaveFeatures = useRef(new Set<object>());
+  // 面積比 0.01% 未満の極小飛び地（表示・クリック対象から除外）
+  const tinyEnclaveFeatures = useRef(new Set<object>());
 
   useEffect(() => { disabledRef.current = disabled; }, [disabled]);
   useEffect(() => { onCellClickRef.current = onCellClick; }, [onCellClick]);
@@ -82,7 +84,14 @@ export const MapView = ({ gameState, onCellClick, disabled }: Props) => {
           if (area > maxArea) { maxArea = area; main = f; }
         }
         for (const f of group) {
-          if (f !== main) enclaveFeatures.current.add(f);
+          if (f !== main) {
+            enclaveFeatures.current.add(f);
+            const ext = f.getGeometry()?.getExtent() ?? [0, 0, 0, 0];
+            const enclaveArea = (ext[2] - ext[0]) * (ext[3] - ext[1]);
+            if (enclaveArea / maxArea < 0.0001) {
+              tinyEnclaveFeatures.current.add(f);
+            }
+          }
         }
       }
       setEnclavesReady(true);
@@ -93,16 +102,18 @@ export const MapView = ({ gameState, onCellClick, disabled }: Props) => {
     map.on('click', (e) => {
       if (disabledRef.current) return;
       const features = map.getFeaturesAtPixel(e.pixel);
-      if (features.length === 0) return;
-      const name = getMunicipalityName(features[0]);
+      const feature = features.find(f => !tinyEnclaveFeatures.current.has(f));
+      if (!feature) return;
+      const name = getMunicipalityName(feature);
       if (name) onCellClickRef.current(name);
     });
 
     map.on('pointermove', (e) => {
       const features = map.getFeaturesAtPixel(e.pixel);
-      const name = features.length > 0 ? getMunicipalityName(features[0]) : null;
+      const feature = features.find(f => !tinyEnclaveFeatures.current.has(f));
+      const name = feature ? getMunicipalityName(feature) : null;
       setHoveredName(name);
-      map.getTargetElement().style.cursor = features.length > 0 ? 'pointer' : '';
+      map.getTargetElement().style.cursor = feature ? 'pointer' : '';
     });
 
     return () => {
@@ -121,6 +132,10 @@ export const MapView = ({ gameState, onCellClick, disabled }: Props) => {
         .forEach((n) => flipPreview.add(n));
     }
     source.getFeatures().forEach((feature) => {
+      if (tinyEnclaveFeatures.current.has(feature)) {
+        feature.setStyle(HIDDEN_STYLE);
+        return;
+      }
       const name = getMunicipalityName(feature);
       const cell = gameState.cells.get(name);
       const stone = cell?.stone ?? null;

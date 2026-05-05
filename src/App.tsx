@@ -103,7 +103,10 @@ export const App = () => {
       <AppBar position="static" sx={{ bgcolor: '#1a237e' }}>
         <Toolbar variant="dense">
           <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: 'bold', letterSpacing: '0.05em' }}>
-            Chiversi — 千葉県行政区域オセロ
+            Chiversi
+            <Box component="span" sx={{ display: { xs: 'none', sm: 'inline' } }}>
+              {' '}— 千葉県行政区域オセロ
+            </Box>
           </Typography>
         </Toolbar>
       </AppBar>
@@ -124,9 +127,9 @@ export const App = () => {
           bgcolor: '#f5f5f5',
           borderTop: '1px solid #ddd',
           display: 'flex',
-          alignItems: 'center',
-          gap: 2,
-          flexWrap: 'wrap',
+          flexDirection: { xs: 'column', sm: 'row' },
+          alignItems: { xs: 'flex-start', sm: 'center' },
+          gap: 1,
         }}
       >
         {gameState.isGameOver ? (
@@ -134,7 +137,7 @@ export const App = () => {
         ) : (
           <>
             <GameInfo gameState={gameState} passMessage={passMessage} />
-            <Box sx={{ ml: 'auto' }}>
+            <Box sx={{ ml: { sm: 'auto' } }}>
               <GameControls onRestart={handleRestart} onShowRules={() => setRulesOpen(true)} />
             </Box>
           </>

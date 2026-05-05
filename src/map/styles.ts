@@ -2,6 +2,9 @@ import { Style, Fill, Stroke } from 'ol/style';
 import Text from 'ol/style/Text';
 import type { StoneColor } from '../types';
 
+/** 完全非表示用スタイル（小さすぎる飛び地に使用） */
+export const HIDDEN_STYLE = new Style();
+
 const COLOR = {
   empty:       { fill: 'rgba(67,160,71,0.3)',   stroke: 'rgba(56,142,60,0.55)', width: 1 },
   black:       { fill: 'rgba(40,40,40,0.9)',    stroke: '#000000',              width: 1.5 },
