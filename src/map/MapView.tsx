@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useCallback } from 'react';
+import { useEffect, useRef } from 'react';
 import OlMap from 'ol/Map';
 import View from 'ol/View';
 import VectorLayer from 'ol/layer/Vector';
@@ -7,9 +7,17 @@ import GeoJSON from 'ol/format/GeoJSON';
 import { fromLonLat } from 'ol/proj';
 import type { FeatureLike } from 'ol/Feature';
 
-import type { GameState } from '../types';
+import type { GameState, StoneColor } from '../types';
 import { getFlippable } from '../game/engine';
-import { getCellStyle, HIDDEN_STYLE } from './styles';
+import { getCellStyle, getFlipStyle, HIDDEN_STYLE } from './styles';
+
+const ANIM_DURATION_MS = 400;
+
+type AnimCell = {
+  startTime: number;
+  fromStone: StoneColor | null;
+  toStone: StoneColor;
+};
 
 type Props = {
   gameState: GameState;
@@ -26,22 +34,32 @@ function getMunicipalityName(feature: FeatureLike): string {
   return city;
 }
 
+function easeInOut(t: number): number {
+  return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+}
+
 export const MapView = ({ gameState, onCellClick, disabled }: Props) => {
   const mapRef = useRef<HTMLDivElement>(null);
-  const mapInstance = useRef<OlMap | null>(null);
   const vectorSource = useRef<VectorSource | null>(null);
-  const [hoveredName, setHoveredName] = useState<string | null>(null);
-  const [enclavesReady, setEnclavesReady] = useState(false);
+  // スタイル関数から参照するゲーム状態（React state は使わない）
+  const gameStateRef = useRef<GameState>(gameState);
+  const prevGameStateRef = useRef<GameState>(gameState);
+  const hoveredNameRef = useRef<string | null>(null);
+  const flipPreviewRef = useRef<Set<string>>(new Set());
+  // アニメーション管理
+  const animatingCells = useRef<Map<string, AnimCell>>(new Map());
+  const rafRef = useRef<number | null>(null);
+  // イベントハンドラ用
   const disabledRef = useRef(disabled);
   const onCellClickRef = useRef(onCellClick);
-  // GeoJSON読み込み時に同名フィーチャーのうち最大面積以外（飛び地）を保持
+  // 飛び地
   const enclaveFeatures = useRef(new Set<object>());
-  // 面積比 0.01% 未満の極小飛び地（表示・クリック対象から除外）
   const tinyEnclaveFeatures = useRef(new Set<object>());
 
   useEffect(() => { disabledRef.current = disabled; }, [disabled]);
   useEffect(() => { onCellClickRef.current = onCellClick; }, [onCellClick]);
 
+  // マップ初期化（一度だけ）
   useEffect(() => {
     if (!mapRef.current) return;
 
@@ -51,7 +69,36 @@ export const MapView = ({ gameState, onCellClick, disabled }: Props) => {
     });
     vectorSource.current = source;
 
-    const layer = new VectorLayer({ source });
+    // VectorLayer のスタイルを関数として定義。
+    // refs を通じて常に最新の状態を参照するため、一度だけ生成すればよい。
+    const layer = new VectorLayer({
+      source,
+      style: (feature: FeatureLike) => {
+        if (tinyEnclaveFeatures.current.has(feature)) return HIDDEN_STYLE;
+
+        const name = getMunicipalityName(feature);
+        const showLabel = !enclaveFeatures.current.has(feature);
+        const anim = animatingCells.current.get(name);
+
+        if (anim) {
+          const elapsed = Date.now() - anim.startTime;
+          const progress = easeInOut(Math.min(1, elapsed / ANIM_DURATION_MS));
+          return getFlipStyle(name, anim.fromStone, anim.toStone, progress, showLabel);
+        }
+
+        const gs = gameStateRef.current;
+        const cell = gs.cells.get(name);
+        return getCellStyle(
+          name,
+          cell?.stone ?? null,
+          gs.legalMoves.has(name),
+          gs.lastPlaced === name,
+          hoveredNameRef.current === name,
+          flipPreviewRef.current.has(name),
+          showLabel
+        );
+      },
+    });
 
     const map = new OlMap({
       target: mapRef.current,
@@ -62,17 +109,16 @@ export const MapView = ({ gameState, onCellClick, disabled }: Props) => {
       }),
       controls: [],
     });
-    mapInstance.current = map;
 
-    // 同名フィーチャーのうち最大バウンディングボックス以外を飛び地として登録
-    // featuresloadend は features 読み込み完了後に確実に発火する
+    // 同名フィーチャーのうち最大バウンディングボックス以外を飛び地として登録し、
+    // 極小（面積比 0.01% 未満）のものは完全非表示とする
     const computeEnclaves = () => {
       const features = source.getFeatures();
       const byName: Record<string, typeof features> = {};
       for (const f of features) {
-        const name = getMunicipalityName(f);
-        if (!byName[name]) byName[name] = [];
-        byName[name].push(f);
+        const n = getMunicipalityName(f);
+        if (!byName[n]) byName[n] = [];
+        byName[n].push(f);
       }
       for (const group of Object.values(byName)) {
         if (group.length <= 1) continue;
@@ -94,7 +140,7 @@ export const MapView = ({ gameState, onCellClick, disabled }: Props) => {
           }
         }
       }
-      setEnclavesReady(true);
+      source.changed();
     };
 
     source.on('featuresloadend', computeEnclaves);
@@ -112,46 +158,95 @@ export const MapView = ({ gameState, onCellClick, disabled }: Props) => {
       const features = map.getFeaturesAtPixel(e.pixel);
       const feature = features.find(f => !tinyEnclaveFeatures.current.has(f));
       const name = feature ? getMunicipalityName(feature) : null;
-      setHoveredName(name);
+
+      if (name !== hoveredNameRef.current) {
+        hoveredNameRef.current = name;
+        const gs = gameStateRef.current;
+        const preview = new Set<string>();
+        if (name && gs.legalMoves.has(name)) {
+          getFlippable(name, gs.currentTurn, gs.cells).forEach(n => preview.add(n));
+        }
+        flipPreviewRef.current = preview;
+        source.changed();
+      }
+
       map.getTargetElement().style.cursor = feature ? 'pointer' : '';
     });
 
     return () => {
       source.un('featuresloadend', computeEnclaves);
+      if (rafRef.current !== null) {
+        cancelAnimationFrame(rafRef.current);
+        rafRef.current = null;
+      }
       map.setTarget(undefined);
     };
   }, []);
 
-  // スタイルをゲーム状態に応じて更新（enclaves 計算完了後のみ実行）
-  const applyStyles = useCallback(() => {
-    const source = vectorSource.current;
-    if (!source) return;
-    const flipPreview = new Set<string>();
-    if (hoveredName && gameState.legalMoves.has(hoveredName)) {
-      getFlippable(hoveredName, gameState.currentTurn, gameState.cells)
-        .forEach((n) => flipPreview.add(n));
-    }
-    source.getFeatures().forEach((feature) => {
-      if (tinyEnclaveFeatures.current.has(feature)) {
-        feature.setStyle(HIDDEN_STYLE);
-        return;
+  // RAF ループ: アニメーション中は毎フレーム source.changed() を呼んでスタイルを更新する
+  const startRafLoop = () => {
+    if (rafRef.current !== null) return;
+    const tick = () => {
+      const now = Date.now();
+      let hasActive = false;
+      for (const [name, anim] of animatingCells.current) {
+        if (now - anim.startTime >= ANIM_DURATION_MS) {
+          animatingCells.current.delete(name);
+        } else {
+          hasActive = true;
+        }
       }
-      const name = getMunicipalityName(feature);
-      const cell = gameState.cells.get(name);
-      const stone = cell?.stone ?? null;
-      const isLegal = gameState.legalMoves.has(name);
-      const isLast = gameState.lastPlaced === name;
-      const isHovered = hoveredName === name;
-      const isFlipPreview = flipPreview.has(name);
-      const showLabel = !enclaveFeatures.current.has(feature);
-      feature.setStyle(getCellStyle(name, stone, isLegal, isLast, isHovered, isFlipPreview, showLabel));
-    });
-  }, [gameState, hoveredName]);
+      vectorSource.current?.changed();
+      rafRef.current = hasActive ? requestAnimationFrame(tick) : null;
+    };
+    rafRef.current = requestAnimationFrame(tick);
+  };
 
+  // gameState 変化時: ref 更新 + 反転セルのアニメーション開始
   useEffect(() => {
-    if (!enclavesReady) return;
-    applyStyles();
-  }, [applyStyles, enclavesReady]);
+    const prev = prevGameStateRef.current;
+    const curr = gameState;
+    gameStateRef.current = curr;
+
+    // リスタート（lastPlaced = null）はアニメーションをクリアして即時更新
+    if (curr.lastPlaced === null) {
+      animatingCells.current.clear();
+      if (rafRef.current !== null) {
+        cancelAnimationFrame(rafRef.current);
+        rafRef.current = null;
+      }
+      vectorSource.current?.changed();
+      prevGameStateRef.current = curr;
+      return;
+    }
+
+    if (curr.lastPlaced !== prev.lastPlaced) {
+      // 着手があった: 石が変化したセルをアニメーション対象に登録
+      const now = Date.now();
+      for (const [name, cell] of curr.cells) {
+        const prevCell = prev.cells.get(name);
+        if (!prevCell || prevCell.stone === cell.stone || cell.stone === null) continue;
+        animatingCells.current.set(name, {
+          startTime: now,
+          fromStone: prevCell.stone,
+          toStone: cell.stone,
+        });
+      }
+      // 手番変化に伴いホバー中マスの反転予測も再計算
+      const name = hoveredNameRef.current;
+      const preview = new Set<string>();
+      if (name && curr.legalMoves.has(name)) {
+        getFlippable(name, curr.currentTurn, curr.cells).forEach(n => preview.add(n));
+      }
+      flipPreviewRef.current = preview;
+      startRafLoop();
+    } else {
+      // パス・ゲーム終了など着手なし → 即時スタイル更新
+      vectorSource.current?.changed();
+    }
+
+    prevGameStateRef.current = curr;
+  }, [gameState]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div

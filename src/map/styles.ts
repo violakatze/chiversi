@@ -5,6 +5,29 @@ import type { StoneColor } from '../types';
 /** 完全非表示用スタイル（小さすぎる飛び地に使用） */
 export const HIDDEN_STYLE = new Style();
 
+type RGBA = [number, number, number, number];
+
+function lerpRGBA(a: RGBA, b: RGBA, t: number): string {
+  const r = Math.round(a[0] + (b[0] - a[0]) * t);
+  const g = Math.round(a[1] + (b[1] - a[1]) * t);
+  const bl = Math.round(a[2] + (b[2] - a[2]) * t);
+  const alpha = +(a[3] + (b[3] - a[3]) * t).toFixed(3);
+  return `rgba(${r},${g},${bl},${alpha})`;
+}
+
+const ANIM_FILL: Record<'black' | 'white' | 'empty', RGBA> = {
+  black: [40, 40, 40, 0.9],
+  white: [255, 255, 255, 0.9],
+  empty: [255, 152, 0, 0.4],
+};
+const ANIM_STROKE: Record<'black' | 'white' | 'empty', RGBA> = {
+  black: [0, 0, 0, 1],
+  white: [180, 180, 180, 0.8],
+  empty: [230, 81, 0, 0.9],
+};
+const FLASH_FILL: RGBA = [255, 235, 59, 0.9];
+const FLASH_STROKE: RGBA = [249, 168, 37, 1];
+
 const COLOR = {
   empty:       { fill: 'rgba(67,160,71,0.3)',   stroke: 'rgba(56,142,60,0.55)', width: 1 },
   black:       { fill: 'rgba(40,40,40,0.9)',    stroke: '#000000',              width: 1.5 },
@@ -33,6 +56,38 @@ function makeStyle(fill: string, stroke: string, width: number, name: string, sh
     stroke: new Stroke({ color: stroke, width }),
     text: showLabel ? makeText(name) : undefined,
   });
+}
+
+/**
+ * 反転アニメーション用スタイル。
+ * progress 0→0.5: fromStone色 → 黄フラッシュ
+ * progress 0.5→1: 黄フラッシュ → toStone色
+ */
+export function getFlipStyle(
+  name: string,
+  fromStone: StoneColor | null,
+  toStone: StoneColor,
+  progress: number,
+  showLabel: boolean
+): Style {
+  const fromKey = fromStone ?? 'empty';
+  const fromFill = ANIM_FILL[fromKey];
+  const fromStroke = ANIM_STROKE[fromKey];
+  const toFill = ANIM_FILL[toStone];
+  const toStroke = ANIM_STROKE[toStone];
+
+  let fillColor: string;
+  let strokeColor: string;
+  if (progress < 0.5) {
+    const t = progress / 0.5;
+    fillColor = lerpRGBA(fromFill, FLASH_FILL, t);
+    strokeColor = lerpRGBA(fromStroke, FLASH_STROKE, t);
+  } else {
+    const t = (progress - 0.5) / 0.5;
+    fillColor = lerpRGBA(FLASH_FILL, toFill, t);
+    strokeColor = lerpRGBA(FLASH_STROKE, toStroke, t);
+  }
+  return makeStyle(fillColor, strokeColor, 2.5, name, showLabel);
 }
 
 export function getCellStyle(
